@@ -1,0 +1,35 @@
+have_header: checking for libkern/OSAtomic.h... -------------------- yes
+
+"clang -o conftest -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-darwin15 -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/backward -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0 -I. -I/Users/val/.rbenv/versions/2.3.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/val/.rbenv/versions/2.3.1/lib -L. -L/Users/val/.rbenv/versions/2.3.1/lib  -fstack-protector     -lruby-static -framework CoreFoundation  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -E -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-darwin15 -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/backward -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0 -I. -I/Users/val/.rbenv/versions/2.3.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libkern/OSAtomic.h>
+/* end */
+
+--------------------
+
+"clang -o conftest -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-darwin15 -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0/ruby/backward -I/Users/val/.rbenv/versions/2.3.1/include/ruby-2.3.0 -I. -I/Users/val/.rbenv/versions/2.3.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/val/.rbenv/versions/2.3.1/lib -L. -L/Users/val/.rbenv/versions/2.3.1/lib  -fstack-protector     -lruby-static -framework CoreFoundation  -O3 -Wno-error=shorten-64-to-32  -pipe -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3:       int main() {
+4:         __sync_synchronize();
+5:         return 0;
+6:       }
+/* end */
+
+./conftest

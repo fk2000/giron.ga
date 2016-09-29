@@ -1,0 +1,15 @@
+current directory: /Library/WebServer/Documents/local.kichij.org/gironga/sample_project/vendor/bundle/gems/bson-3.2.6/ext/bson
+/Users/val/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160928-38071-7xwzj5.rb extconf.rb
+creating Makefile
+
+current directory: /Library/WebServer/Documents/local.kichij.org/gironga/sample_project/vendor/bundle/gems/bson-3.2.6/ext/bson
+make "DESTDIR=" clean
+
+current directory: /Library/WebServer/Documents/local.kichij.org/gironga/sample_project/vendor/bundle/gems/bson-3.2.6/ext/bson
+make "DESTDIR="
+compiling native.c
+linking shared-object native.bundle
+
+current directory: /Library/WebServer/Documents/local.kichij.org/gironga/sample_project/vendor/bundle/gems/bson-3.2.6/ext/bson
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 native.bundle ./.gem.20160928-38071-1wdjf77

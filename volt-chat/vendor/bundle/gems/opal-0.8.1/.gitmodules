@@ -1,0 +1,7 @@
+[submodule "spec/corelib"]
+	path = spec/corelib
+	url = https://github.com/opal/rubyspec
+[submodule "test/cruby"]
+	path = test/cruby
+	url = https://github.com/ruby/ruby.git
+	branch = ruby_2_2

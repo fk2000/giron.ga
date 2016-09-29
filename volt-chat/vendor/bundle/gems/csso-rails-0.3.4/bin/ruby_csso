@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'csso-rails'
+require 'csso/cli'
+
+Csso::CLI.run!
